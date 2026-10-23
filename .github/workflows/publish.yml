@@ -1,0 +1,27 @@
+name: Publish
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install
+      - run: pnpm test
+      - run: pnpm exec tsc -b --pretty false
+      - name: Set package versions from tag
+        run: node scripts/set-version.mjs "${GITHUB_REF_NAME#v}"
+      - run: pnpm -r --filter './packages/**' publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

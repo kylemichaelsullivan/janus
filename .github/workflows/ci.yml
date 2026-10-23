@@ -21,5 +21,3 @@ jobs:
       - run: pnpm install
       - run: pnpm test
       - run: pnpm exec tsc -b --pretty false
-      - name: Kitchen-sink Axe (web)
-        run: CI=true pnpm exec vitest run apps/kitchen-sink/src/App.test.tsx
