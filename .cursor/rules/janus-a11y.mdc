@@ -1,0 +1,6 @@
+---
+description: Axe and native a11y gates
+alwaysApply: true
+---
+
+WCAG 2.2 AA. Every web layer needs `vitest-axe`. Serious/critical fail CI. Native layers need RNTL `accessibilityRole` / `accessibilityLabel` assertions. axe-core cannot audit React Native — do not fake it.

@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Janus Kitchen Sink",
+    "slug": "janus-kitchen-sink",
+    "scheme": "janus",
+    "version": "0.0.0-dev",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": ["expo-router"],
+    "ios": { "supportsTablet": true },
+    "android": {},
+    "web": { "bundler": "metro" }
+  }
+}

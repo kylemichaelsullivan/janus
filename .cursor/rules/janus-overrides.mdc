@@ -1,0 +1,6 @@
+---
+description: Janus platform override resolution
+alwaysApply: true
+---
+
+Most specific wins: `file.ios.tsx` > `file.apple.tsx` > `file.native.tsx` > `file.tsx`. Web never resolves `*.native.*`. Expo Router files in `app/` must keep a non-platform sibling. Partial overrides are folder slots, not merged named exports.

@@ -1,0 +1,12 @@
+# Janus
+
+> Hybrid Web + Native UI from a single component source.
+
+Use `@janus/primitives` (`H1`, `P`, `Div`, `Button`, …). Never write raw HTML or raw React Native primitives. Compose single-purpose layers. Platform APIs live in `*.ios.tsx` / `*.android.tsx` / `*.native.tsx` / `*.web.tsx`. Axe (web) or RNTL a11y tests ship with every layer.
+
+- Mapping: packages/core/src/mapping.json
+- Registry: packages/ui/src/registry.json
+- Rules: .cursor/rules/
+- Skills: .cursor/skills/ (janus-migrate for converting existing React apps)
+- CLI: `janus migrate --dry-run` then `--write`. Do not hand-rename HTML tags.
+- Full text: /llms-full.txt

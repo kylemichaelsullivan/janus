@@ -1,0 +1,23 @@
+{
+  "name": "@janus/headless",
+  "version": "0.0.0-dev",
+  "description": "Janus headless facade (Base UI on web, RN Primitives on native)",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@janus/core": "workspace:*",
+    "@janus/primitives": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

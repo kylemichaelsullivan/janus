@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/style" },
+    { "path": "./packages/compiler" },
+    { "path": "./packages/primitives" },
+    { "path": "./packages/metro" },
+    { "path": "./packages/vite" },
+    { "path": "./packages/headless" },
+    { "path": "./packages/ui" },
+    { "path": "./packages/router" },
+    { "path": "./packages/eslint-plugin-janus" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/create-janus-app" }
+  ]
+}

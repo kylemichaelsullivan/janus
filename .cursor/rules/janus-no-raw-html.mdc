@@ -1,0 +1,6 @@
+---
+description: Forbid raw HTML and raw React Native primitives in Janus app source
+alwaysApply: true
+---
+
+Do not write lowercase HTML (`<h1>`, `<div>`) or import `View`/`Text`/`Pressable`/`TextInput` from `react-native` in app source. Use `@janus/primitives` (`H1`, `Div`, `Button`, `Input`). Autofix: `<h1>` → `<H1>` plus the Janus import.

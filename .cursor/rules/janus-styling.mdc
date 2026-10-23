@@ -1,0 +1,6 @@
+---
+description: NativeWind className limits
+alwaysApply: true
+---
+
+`className` does not cascade on native. Style each `Text` layer. Do not rely on descendant selectors in shared files. Use `cn` from `@janus/style`.

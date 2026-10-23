@@ -1,0 +1,70 @@
+{
+  "wave1": [
+    "accordion",
+    "alert",
+    "aspect-ratio",
+    "avatar",
+    "badge",
+    "button",
+    "button-group",
+    "card",
+    "checkbox",
+    "empty",
+    "field",
+    "input",
+    "item",
+    "kbd",
+    "label",
+    "progress",
+    "radio-group",
+    "separator",
+    "skeleton",
+    "spinner",
+    "switch",
+    "textarea",
+    "toggle",
+    "toggle-group",
+    "typography"
+  ],
+  "wave2": [
+    "alert-dialog",
+    "collapsible",
+    "combobox",
+    "command",
+    "context-menu",
+    "dialog",
+    "drawer",
+    "dropdown-menu",
+    "hover-card",
+    "native-select",
+    "popover",
+    "scroll-area",
+    "select",
+    "sheet",
+    "tabs",
+    "tooltip"
+  ],
+  "wave3": ["table", "calendar", "sidebar", "chart"],
+  "exceptions": [
+    {
+      "name": "chart",
+      "reason": "recharts is DOM-primary. Native needs a Victory or Gifted Charts override."
+    },
+    {
+      "name": "table",
+      "reason": "Pixel-perfect table semantics are degraded on native."
+    },
+    {
+      "name": "hover-card",
+      "reason": "Degraded: press-to-open Popover surface until hover exists on native."
+    },
+    {
+      "name": "calendar",
+      "reason": "Use an Expo date-picker override for native."
+    },
+    {
+      "name": "sidebar",
+      "reason": "Layout shell ships after 1.0.0."
+    }
+  ]
+}

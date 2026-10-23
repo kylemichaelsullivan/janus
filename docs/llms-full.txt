@@ -1,0 +1,40 @@
+# Janus — full agent index
+
+## Contract
+
+1. Import primitives only from `@janus/primitives`.
+2. One component, one job. Compose organisms from molecules.
+3. Do not use raw HTML (`<h1>`) or raw RN (`View`, `Text`) in app source.
+4. Platform-specific APIs belong in override files.
+5. Run Axe on web layers and RNTL a11y assertions on native layers in the same change.
+6. After Metro/Vite/Babel edits, run `janus doctor`.
+
+## Toolchain
+
+- Vite+ (`vp check`, `vp test`, `vp pack`, `vp run`) for the monorepo and web.
+- Expo + Metro for native apps.
+- `janus init|add|build|dev|doctor|migrate`.
+- Convert existing Vite or Expo apps with `janus migrate`. Do not hand-rename tags. Residuals go through `.cursor/skills/janus-migrate/SKILL.md`.
+- `create-janus-app` writes Expo `app/`, `metro.config.cjs`, and `JanusPortalHost`.
+
+## Mapping
+
+See `packages/core/src/mapping.json` and `docs/mapping.md`. `H1` → web `h1` / native `Text` + `accessibilityRole="header"`.
+
+## Overrides
+
+Most-specific wins: iOS `.ios` → `.apple` → `.native` → base. Web `.web` → base. Web never loads `*.native.*`. Folder slots only. Expo Router `app/` files need a non-platform sibling.
+
+## Headless and UI
+
+App imports `@janus/ui` names. Facade is `@janus/headless` (Base UI on web, RN Primitives on native). Waves 1–2 are shipped. Wave 3 exceptions live in `packages/ui/src/registry.json`.
+
+## A11y
+
+Web: Axe serious/critical fail CI. Native: mapping tests + RNTL + AMA. No `@axe-core/react-native`.
+
+## Rules and skills
+
+- `.cursor/rules/`
+- `.cursor/skills/`
+- Human docs: `docs/`

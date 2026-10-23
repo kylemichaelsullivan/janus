@@ -1,0 +1,22 @@
+{
+  "name": "eslint-plugin-janus",
+  "version": "0.0.0-dev",
+  "description": "ESLint plugin enforcing Janus composition rules",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@janus/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "eslint": ">=9"
+  }
+}

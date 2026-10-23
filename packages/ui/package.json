@@ -1,0 +1,25 @@
+{
+  "name": "@janus/ui",
+  "version": "0.0.0-dev",
+  "description": "ShadCN-style Janus composed layers",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./registry.json": "./src/registry.json"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@janus/headless": "workspace:*",
+    "@janus/primitives": "workspace:*",
+    "@janus/style": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

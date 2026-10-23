@@ -1,0 +1,6 @@
+---
+description: Janus performance defaults
+alwaysApply: true
+---
+
+Memoize primitive leaves. Do not rote-`memo` composites. Behavior lives in hooks (`useJanusClassName`, `useMappedA11y`). Split contexts by update rate. No `Platform.OS` in shared layers.

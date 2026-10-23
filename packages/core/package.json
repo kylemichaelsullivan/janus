@@ -1,0 +1,19 @@
+{
+  "name": "@janus/core",
+  "version": "0.0.0-dev",
+  "description": "Janus mapping table, a11y maps, and override resolution",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./mapping.json": "./src/mapping.json"
+  },
+  "files": ["dist", "src/mapping.json"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "pnpm build"
+  }
+}

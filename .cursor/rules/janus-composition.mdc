@@ -1,0 +1,6 @@
+---
+description: Photoshop-layer composition
+alwaysApply: true
+---
+
+One component, one job. Compose `<Card><CardHeader/><CardContent/></Card>`. Do not add `header`/`footer` props to a parent. If a file fetches data and draws a button, split it.

@@ -1,0 +1,6 @@
+---
+description: Janus headless public API
+alwaysApply: true
+---
+
+App code imports `@janus/headless` or `@janus/ui` (`Dialog`, `DialogTrigger`). Never import Radix or Base UI. A `JanusPortalHost` belongs at the app root.

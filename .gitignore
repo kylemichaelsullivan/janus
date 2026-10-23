@@ -1,0 +1,34 @@
+# Working implementation plan — local only, not part of the published tree
+PLAN.md
+
+# Dependencies and build
+node_modules/
+.pnpm-store/
+dist/
+.turbo/
+.vite/
+.vitest/
+*.tsbuildinfo
+
+# Janus emit
+.janus/
+
+# Logs and env
+*.log
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Test / coverage
+coverage/
+playwright-report/
+test-results/
+
+# Expo / native
+apps/kitchen-sink/ios/
+apps/kitchen-sink/android/
+.expo/

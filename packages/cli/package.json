@@ -1,0 +1,23 @@
+{
+  "name": "janus",
+  "version": "0.0.0-dev",
+  "description": "Janus CLI",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "janus": "./dist/bin.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@janus/compiler": "workspace:*",
+    "@janus/core": "workspace:*"
+  }
+}

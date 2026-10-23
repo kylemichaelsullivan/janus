@@ -1,0 +1,22 @@
+{
+  "name": "@janus/router",
+  "version": "0.0.0-dev",
+  "description": "Expo Router conventions for Janus",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@janus/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

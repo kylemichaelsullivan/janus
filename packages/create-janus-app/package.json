@@ -1,0 +1,16 @@
+{
+  "name": "create-janus-app",
+  "version": "0.0.0-dev",
+  "description": "Scaffold a Janus Expo or Vite+ app",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "create-janus-app": "./dist/bin.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "janus": "workspace:*"
+  }
+}
