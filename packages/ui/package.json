@@ -11,8 +11,13 @@
     },
     "./registry.json": "./src/registry.json"
   },
+  "files": ["dist", "src"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepack": "pnpm build"
   },
   "dependencies": {
     "@janus/headless": "workspace:*",

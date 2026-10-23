@@ -12,6 +12,9 @@
     "./mapping.json": "./src/mapping.json"
   },
   "files": ["dist", "src/mapping.json"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepack": "pnpm build"

@@ -11,8 +11,12 @@
     }
   },
   "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepack": "pnpm build"
   },
   "dependencies": {
     "@babel/core": "^7.28.4",

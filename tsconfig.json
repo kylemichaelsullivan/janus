@@ -12,6 +12,7 @@
     { "path": "./packages/router" },
     { "path": "./packages/eslint-plugin-janus" },
     { "path": "./packages/cli" },
-    { "path": "./packages/create-janus-app" }
+    { "path": "./packages/create-janus-app" },
+    { "path": "./packages/react" }
   ]
 }

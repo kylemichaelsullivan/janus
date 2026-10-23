@@ -6,6 +6,28 @@ Developers write ShadCN-style trees with HTML-named layers (`H1`, `P`, `Div`, `B
 
 **This is the working prototype toward `1.0.0`.** Package versions are `0.0.0-dev` until the first GitHub tag.
 
+## Use in another app
+
+```bash
+pnpm add @janus/react
+pnpm add -D @janus/vite janus
+```
+
+```ts
+import { H1, Button, Card, JanusPortalHost, cn } from "@janus/react";
+```
+
+Or scaffold a tree:
+
+```bash
+pnpm create janus-app my-app
+cd my-app
+pnpm install
+janus doctor
+```
+
+Convert an existing Vite or Expo app with `janus migrate`. Residuals are agent work (`.cursor/skills/janus-migrate`).
+
 ## Opinionated toolchain
 
 - Vite+ / `pnpm` + Vitest for the monorepo and web
@@ -19,6 +41,7 @@ Unsupported: webpack, CRA, Next, CSS-in-JS, raw HTML, raw RN in app source.
 
 | Package | Role |
 | --- | --- |
+| `@janus/react` | App runtime umbrella (`H1`, `Button`, `JanusPortalHost`, `cn`) |
 | `@janus/core` | Mapping table, a11y, override resolution |
 | `@janus/primitives` | HTML-named layers |
 | `@janus/compiler` | AST rewrite + emit |
@@ -28,15 +51,16 @@ Unsupported: webpack, CRA, Next, CSS-in-JS, raw HTML, raw RN in app source.
 | `janus` | CLI |
 | `create-janus-app` | Scaffold |
 
-## Commands
+Fine-grained imports still work: `@janus/react/primitives`, `@janus/react/ui`, `@janus/react/headless`, `@janus/react/style`.
+
+## Monorepo commands
 
 ```bash
 pnpm install
 pnpm test
+pnpm lint
 pnpm exec janus doctor
 pnpm exec janus migrate --dry-run
 ```
-
-Convert an existing Vite or Expo app with `janus migrate`. Residuals are agent work (`.cursor/skills/janus-migrate`).
 
 Human docs: `docs/executive-summary.md`. Agent contract: `AGENTS.md`.

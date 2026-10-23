@@ -29,6 +29,4 @@ playwright-report/
 test-results/
 
 # Expo / native
-apps/kitchen-sink/ios/
-apps/kitchen-sink/android/
 .expo/

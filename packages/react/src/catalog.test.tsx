@@ -1,5 +1,6 @@
-import { Main, P, Ul } from "@janus/primitives";
-import { JanusPortalHost } from "@janus/headless";
+import { render, screen } from "@testing-library/react";
+import { axe } from "vitest-axe";
+import { describe, expect, it } from "vitest";
 import {
   Alert,
   Button,
@@ -19,8 +20,11 @@ import {
   Field,
   Input,
   Item,
+  JanusPortalHost,
   Kbd,
   Label,
+  Main,
+  P,
   Progress,
   RadioGroup,
   RadioGroupItem,
@@ -32,17 +36,16 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@janus/ui";
-import { Hero } from "./components/Hero.js";
+  Ul,
+} from "./index.js";
 
-export function App() {
+function Catalog() {
   return (
     <JanusPortalHost>
       <Main className="mx-auto max-w-xl p-6">
-        <Hero />
         <Card>
           <CardHeader>
-            <CardTitle>Kitchen sink</CardTitle>
+            <CardTitle>Catalog</CardTitle>
           </CardHeader>
           <CardContent>Single-source layers compiled to semantic HTML.</CardContent>
           <Field label="Name" htmlFor="name">
@@ -97,3 +100,14 @@ export function App() {
     </JanusPortalHost>
   );
 }
+
+describe("@janus/react catalog", () => {
+  it("renders composed layers without serious Axe violations", async () => {
+    const { container } = render(<Catalog />);
+    expect(screen.getByText("Catalog")).toBeTruthy();
+    const results = await axe(container);
+    expect(results.violations.filter((item) => item.impact === "serious" || item.impact === "critical")).toEqual(
+      [],
+    );
+  });
+});

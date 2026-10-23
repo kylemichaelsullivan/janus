@@ -7,8 +7,13 @@
   "bin": {
     "create-janus-app": "./dist/bin.js"
   },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepack": "pnpm build"
   },
   "dependencies": {
     "janus": "workspace:*"

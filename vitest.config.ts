@@ -17,6 +17,7 @@ export default defineConfig({
       "@janus/router": `${root}/packages/router/src/index.ts`,
       "eslint-plugin-janus": `${root}/packages/eslint-plugin-janus/src/index.ts`,
       janus: `${root}/packages/cli/src/index.ts`,
+      "@janus/react": `${root}/packages/react/src/index.ts`,
     },
   },
   esbuild: {
@@ -24,7 +25,7 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
-    include: ["packages/**/*.test.ts", "packages/**/*.test.tsx", "apps/kitchen-sink/src/**/*.test.tsx"],
+    include: ["packages/**/*.test.ts", "packages/**/*.test.tsx"],
     setupFiles: ["./vitest.setup.ts"],
   },
 });

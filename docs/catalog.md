@@ -1,6 +1,6 @@
 # Catalog
 
-App code imports ShadCN names from `@janus/ui` or copies them with `janus add`. Never import Radix, Base UI, or RN Primitives in app source.
+App code imports ShadCN names from `@janus/react` (or `@janus/ui`) or copies them with `janus add`. Never import Radix, Base UI, or RN Primitives in app source.
 
 ## Wave 1
 
