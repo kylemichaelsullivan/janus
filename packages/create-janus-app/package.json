@@ -4,6 +4,13 @@
   "description": "Scaffold a Janus Expo or Vite+ app",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylemichaelsullivan/janus.git",
+    "directory": "packages/create-janus-app"
+  },
+  "homepage": "https://github.com/kylemichaelsullivan/janus#readme",
+  "bugs": "https://github.com/kylemichaelsullivan/janus/issues",
   "bin": {
     "create-janus-app": "./dist/bin.js"
   },

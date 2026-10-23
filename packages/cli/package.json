@@ -4,6 +4,13 @@
   "description": "Janus CLI",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylemichaelsullivan/janus.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/kylemichaelsullivan/janus#readme",
+  "bugs": "https://github.com/kylemichaelsullivan/janus/issues",
   "bin": {
     "janus": "./dist/bin.js"
   },

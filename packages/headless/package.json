@@ -4,6 +4,13 @@
   "description": "Janus headless facade (Base UI on web, RN Primitives on native)",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylemichaelsullivan/janus.git",
+    "directory": "packages/headless"
+  },
+  "homepage": "https://github.com/kylemichaelsullivan/janus#readme",
+  "bugs": "https://github.com/kylemichaelsullivan/janus/issues",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

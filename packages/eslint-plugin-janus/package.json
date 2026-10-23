@@ -4,6 +4,13 @@
   "description": "ESLint plugin enforcing Janus composition rules",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylemichaelsullivan/janus.git",
+    "directory": "packages/eslint-plugin-janus"
+  },
+  "homepage": "https://github.com/kylemichaelsullivan/janus#readme",
+  "bugs": "https://github.com/kylemichaelsullivan/janus/issues",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

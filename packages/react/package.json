@@ -4,6 +4,13 @@
   "description": "Janus runtime umbrella for app code",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylemichaelsullivan/janus.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/kylemichaelsullivan/janus#readme",
+  "bugs": "https://github.com/kylemichaelsullivan/janus/issues",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

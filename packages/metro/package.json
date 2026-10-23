@@ -4,6 +4,13 @@
   "description": "Expo Metro plugin for Janus",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylemichaelsullivan/janus.git",
+    "directory": "packages/metro"
+  },
+  "homepage": "https://github.com/kylemichaelsullivan/janus#readme",
+  "bugs": "https://github.com/kylemichaelsullivan/janus/issues",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
